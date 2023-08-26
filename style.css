@@ -1,0 +1,31 @@
+.body{
+    background-color: gray;
+}
+.cityh1{
+    text-align: center;
+    font-size: 60px;
+    border: 2px solid #ccc;
+    background-color: #DDE6ED;
+}
+
+.d-flex{
+    padding-left: 90px;
+    padding-right: 83px;
+    height: 50px;
+}
+
+#submit{
+    background-color: #2D4356;
+    color: white;
+    border-color: #ccc;
+    margin-left: 710px;
+    margin-top: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 20px;
+}
+
+.navbar-brand{
+    padding-left: 711.5px;
+    font-size: 25px;
+}

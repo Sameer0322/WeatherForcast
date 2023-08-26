@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Weather App
-         
-    </title>
+    <title>Weather App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    
   </head>
-  <body>
+  <link rel="stylesheet" href="style.css">
+  <body class="body">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Weather App</a>
@@ -16,169 +16,177 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Delhi</a></li>
-                  <li><a class="dropdown-item" href="#">Lucknow</a></li>
-                  <!-- <li><hr class="dropdown-divider"></li> -->
-                  <li><a class="dropdown-item" href="#">Bangalore</a></li>
-                </ul>
-              </li>
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
               </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
-            </form>
+            </ul> -->
+            
           </div>
         </div>
       </nav>
       <br><br>
+<!-- ====================================================================================== -->
+      <form class="d-flex" role="search">
+        <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        
+      </form>
+      <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+      <br><br>
       
 <!-- ========================================================================= -->
 <div class="container">
-    <h1 class="my-4 text-center">Weather for <span id="cityName"></span></h1>
+    <h1 class="cityh1">Weather for <span id="cityName"></span></h1>
+    <br>
     <main>  
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" style="padding-left: 40px; padding-right: 40px;">
+          <!-- Temperature ================================================================================================================================================= -->
             <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm border-primary">
                     <div class="card-header py-3 text-bg-primary border-primary">
                         <h4 class="my-0 fw-normal">Temperatures</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-muted fw-heavy"> <span>&#8451;</span></small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Temperature is <span id="temp"></span></li>
-                            <li>Min Temperature is <span id="min_temp"></span></li>
-                            <li>Max Temperature is <span id="max_temp"></span></li>
+                        <h1 class="card-title pricing-card-title"><span id="temp"></span><small class="text-muted fw-heavy"> <span>&#8451;</span></small></h1>
+                        <ul class="list-unstyled mt-5 mb-4">
+                            <li>Temperature</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-primary">contact us</button>
                     </div>
                 </div>
             </div> 
+            <!-- Humidty ================================================================================================================================================= -->
             <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm border-primary">
                     <div class="card-header py-3 text-bg-primary border-primary">
                         <h4 class="my-0 fw-normal">Humidity</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small class="text-muted fw-heavy"> %</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Cloud PCT is <span id="cloud_pct"></span></li>
-                            <li>Feels Like is <span id="feels_like"></span></li>
-                            <li>Humidity is <span id="humidity"></span></li>                            
+                        <h1 class="card-title pricing-card-title"><span id="humidity"></span><small class="text-muted fw-heavy"> %</small></h1>
+                        <ul class="list-unstyled mt-5 mb-4">
+                            <li>Humidity</li>                            
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-primary">contact us</button>
                     </div>
                 </div>
             </div>
+            <!-- wind speed================================================================================================================================================= -->
             <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm border-primary">
                     <div class="card-header py-3 text-bg-primary border-primary">
-                        <h4 class="my-0 fw-normal">Wind </h4>
+                        <h4 class="my-0 fw-normal">Wind Speed</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span><small class="text-muted fw-heavy"> km/h</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Wind Speed is <span id="wind_speed"></span></li>
-                            <!-- <li>Wind Degrees is <span id="wind_degrees"></span></li> -->
-                            <li>Sunrise Time is <span id="sunrise"></span></li>
-                            <li>Sunset Time is <span id="sunset"></span></li>
+                        <h1 class="card-title pricing-card-title"><span id="wind_speed"></span><small class="text-muted fw-heavy"> km/h</small></h1>
+                        <ul class="list-unstyled mt-5 mb-4">
+                            <li>Wind Speed</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-primary">contact us</button>
                     </div>
                 </div>
             </div>
+            <!-- Minium Temp================================================================================================================================================ -->
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                  <div class="card-header py-3 text-bg-primary border-primary">
+                      <h4 class="my-0 fw-normal">Minimum Temperatures</h4>
+                  </div>
+                  <div class="card-body">
+                      <h1 class="card-title pricing-card-title"><span id="min_temp"></span><small class="text-muted fw-heavy"> <span>&#8451;</span></small></h1>
+                      <ul class="list-unstyled mt-5 mb-4">
+                          <li>Min Temperature </li>
+                      </ul>
+                  </div>
+              </div>
+          </div> 
+          <!-- Max Temp==================================================================================================================================================== -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Maximum Temperatures</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><span id="max_temp"></span><small class="text-muted fw-heavy"> <span>&#8451;</span></small></h1>
+                    <ul class="list-unstyled mt-5 mb-4">
+                        <li>Maximum Temperature</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+        <!-- cloud pct =================================================================================================================================================== -->
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                  <h4 class="my-0 fw-normal">Cloud PCT</h4>
+              </div>
+              <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span id="cloud_pct"></span><small class="text-muted fw-heavy"> </small></h1>
+                  <ul class="list-unstyled mt-5 mb-4">
+                      <li>Cloud PCT</li>
+                  </ul>
+              </div>
+          </div>
+      </div> 
+      </div>
     </main>
      <!--==========================================================  -->
-      <h2 style="text-align: center; padding-top: 40px;">More Places</h2>
+      <!-- <h2 style="text-align: center; padding-top: 40px;">More Places</h2>
 
       <div class="container mt-5">
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th scope="col" style="width: 180px;">Column 1</th>
-                    <th scope="col">Column 2</th>
-                    <th scope="col">Column 3</th>
-                    <th scope="col">Column 4</th>
-                    <th scope="col">Column 5</th>
-                    <th scope="col">Column 6</th>
-                    <th scope="col">Column 7</th>
-                    <th scope="col">Column 8</th>
-                    <th scope="col">Column 9</th>
-                    <th scope="col">Column 10</th>
-                    <th scope="col">Column 11</th>
+                    <th scope="col" style="width: 180px;"></th>
+                    <th scope="col">Temperature</th>
+                    <th scope="col">Humidity</th>
+                    <th scope="col">Wind Speed</th>
+                    <th scope="col">Min Temperature</th>
+                    <th scope="col">Max Temperature</th>
+                    <th scope="col">Cloud PCT</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Row 1, Cell 1</td>
+                    <td>INDIA</td>
                     <td>Row 1, Cell 2</td>
                     <td>Row 1, Cell 3</td>
                     <td>Row 1, Cell 4</td>
                     <td>Row 1, Cell 5</td>
                     <td>Row 1, Cell 6</td>
                     <td>Row 1, Cell 7</td>
-                    <td>Row 1, Cell 8</td>
-                    <td>Row 1, Cell 9</td>
-                    <td>Row 1, Cell 10</td>
-                    <td>Row 1, Cell 11</td>
+                    
                 </tr>
                 <tr>
-                    <td>Row 2, Cell 1</td>
+                    <td>USA</td>
                     <td>Row 2, Cell 2</td>
                     <td>Row 2, Cell 3</td>
                     <td>Row 2, Cell 4</td>
                     <td>Row 2, Cell 5</td>
                     <td>Row 2, Cell 6</td>
                     <td>Row 2, Cell 7</td>
-                    <td>Row 2, Cell 8</td>
-                    <td>Row 2, Cell 9</td>
-                    <td>Row 2, Cell 10</td>
-                    <td>Row 2, Cell 11</td>
+                    
                 </tr>
                 <tr>
-                    <td>Row 3, Cell 1</td>
+                    <td>RUSSIA</td>
                     <td>Row 3, Cell 2</td>
                     <td>Row 3, Cell 3</td>
                     <td>Row 3, Cell 4</td>
                     <td>Row 3, Cell 5</td>
                     <td>Row 3, Cell 6</td>
                     <td>Row 3, Cell 7</td>
-                    <td>Row 3, Cell 8</td>
-                    <td>Row 3, Cell 9</td>
-                    <td>Row 3, Cell 10</td>
-                    <td>Row 3, Cell 11</td>
+                    
                 </tr>
                 <tr>
-                    <td>Row 4, Cell 1</td>
+                    <td>CANADA</td>
                     <td>Row 4, Cell 2</td>
                     <td>Row 4, Cell 3</td>
                     <td>Row 4, Cell 4</td>
                     <td>Row 4, Cell 5</td>
                     <td>Row 4, Cell 6</td>
                     <td>Row 4, Cell 7</td>
-                    <td>Row 4, Cell 8</td>
-                    <td>Row 4, Cell 9</td>
-                    <td>Row 4, Cell 10</td>
-                    <td>Row 4, Cell 11</td>
+                    
                 </tr>
             </tbody>
         </table>
-      </div>
+      </div> -->
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="script.js"></script>
